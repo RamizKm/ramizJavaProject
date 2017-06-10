@@ -12,5 +12,15 @@ this.name=n;
 
 }
 
+public String getSubName() {
+
+if(name==null || name.length()==0) {
+return null;
+
+}
+return name;
+
+}
+
 
 }
