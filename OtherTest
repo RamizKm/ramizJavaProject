@@ -1,0 +1,11 @@
+public class OtherTest
+  {
+  public static void main(String[] test) {
+  
+  
+  System.out.println("ramiz mtest is coming");
+  }
+  
+  
+  
+  }
