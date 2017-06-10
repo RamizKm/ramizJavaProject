@@ -7,4 +7,12 @@ System.out.println("main function started");
 
 }
 
+public void add(int a,int b) {
+int c=a+b;
+System.out.println(a+b);
+
+System.out.println(""+a+b);
+
+}
+
 }
