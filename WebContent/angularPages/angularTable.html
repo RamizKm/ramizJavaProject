@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/angular.js">
+
+
+
+
+
+</script>
+<script type="text/javascript">
+var app=angular.module('myNgAppDir',[]);
+
+app.controller('ngCntrlDkd',function($scope)
+		{
+	console.log('ing nggcontrold');
+	$scope.stdList=[
+	                {stName:'abc momin',stdRollNo:12},
+	                {stName:'pqr momin',stdRollNo:13},
+	                {stName:'zyx momin',stdRollNo:14},
+	                {stName:'dkt momin',stdRollNo:15}
+	                ];
+		});
+
+</script>
+
+
+</head>
+<body ng-app="myNgAppDir">
+
+
+<div ng-controller="ngCntrlDkd">
+ <table >
+ <tr ng-repeat="x in stdList">
+  <td ng-if='$odd' style="background-color: red"> {{$index}}{{x.stName}} </td>
+  <td ng-if='$odd' style="background-color: red">{{x.stdRollNo}}</td>
+ </tr>
+ </table>
+
+
+<div ng-show="true"> div 1 visible div dispalued</div>
+
+<div ng-show="false"> div 2 visible div dispalued</div>
+<div ng-show="true"> div 3 visible div dispalued</div>
+
+<div ng-hide="false"> div 4 visible div dispalued ng hide testing</div>
+<div ng-hide="true"> div 5 visible div dispalued ng hide testing</div>
+
+
+</div>
+
+</body>
+</html>

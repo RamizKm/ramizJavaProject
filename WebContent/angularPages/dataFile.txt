@@ -1,0 +1,15 @@
+[
+
+{
+	name:"amogi vathar vadgaon",
+	location:"near NH4 wathar vadgaon",
+}
+,
+{
+	name:"dkte ichalkaranji ",
+	location:"near NH4 wathar vadgaon",
+}
+
+
+]
+

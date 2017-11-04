@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Angular scope html page</title>
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body>
+
+<div ng-app="mydivapp" ng-controller="mydivcontroller">
+
+
+ my name is {{fistName}}
+
+<br/>
+city list <li ng-repeat="x in cityListx  " >{{x| uppercase}}</li>
+
+city list <li ng-repeat="y in cityListx  " >{{y| lowercase}}</li>
+
+</div>
+
+<script type="text/javascript">
+
+ var appname=angular.module("mydivapp",[]);
+appname.controller("mydivcontroller",function($scope) {
+	
+	$scope.fistName="amdocs DVCI pune";
+	$scope.cityListx=["pune","mumbai","kolhapur","satara"];
+	
+	
+}		);
+
+
+
+
+</script>
+
+
+</body>
+</html>

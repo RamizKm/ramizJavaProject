@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body ng-app="myCustomNgApp">
+
+
+<div  ng-controller="myServiceCntrLCall">
+
+{{display}}
+ </div>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var appc=angular.module('myCustomNgApp',[]);
+
+
+appc.service('servName',function() {
+	this.myFunc=function(inputvar) {
+		 console.log('call to fud');
+		return 'Hello' +inputvar +'Current time is '+new Date();
+	}
+	
+}
+);
+
+appc.controller('myServiceCntrLCall',function($scope,servName) {
+	$scope.display=servName.myFunc('Ramiz');
+});
+
+
+
+
+
+</script>
+</html>

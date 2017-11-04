@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>orderBYFileter</title>
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body ng-app="orderNgApp">
+<div ng-controller="orderNgController">
+<ul>
+	<li ng-repeat="x in nameList  | orderBy:'country'">
+	{{x.firstNm +'  , '+x.secondNm+ ',   '+x.country }}
+	 </li>
+</ul>
+
+sorting by name
+<ul>
+	<li ng-repeat="x in nameList  | orderBy:'firstNm'">
+	{{x.firstNm +'  , '+x.secondNm+ ',   '+x.country }}
+	 </li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+
+var myapp=angular.module("orderNgApp",[]);
+
+myapp.controller("orderNgController",function($scope){
+	console.log('orderNgController started');
+	$scope.nameList= [
+			{firstNm:"ramizm",secondNm:"momin",country:"india"},
+			{firstNm:"shahabajm",secondNm:"momin",country:"pune"},
+			{firstNm:"tanuja",secondNm:"momin",country:"vadgaon"},
+			{firstNm:"raja",secondNm:"momin",country:"abu dhabi"}
+	];
+	
+	
+	
+});
+
+
+</script>
+
+</body>
+</html>

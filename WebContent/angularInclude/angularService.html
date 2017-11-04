@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body ng-app="myNgApp">
+
+
+<div ng-controller="myCntrlTest">
+
+{{msgFromController}}
+
+ </div>
+
+
+<div ng-controller="ajaxServiceTest">
+Ajax response will display bewlo msg <br/>
+{{ajaxResponse}}
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+var myApp=angular.module('myNgApp',[]);
+
+
+myApp.controller('myCntrlTest',function($scope) {
+console.log('controller working');	
+	$scope.msgFromController="Welcome to message from controller.You will see message";
+	
+	
+});
+
+myApp.controller('ajaxServiceTest', function($http,$scope) {
+	
+console.log('angular ajax controller');
+
+	$http.get('angularServiceResponse.html').then(function(response)
+			{
+			$scope.ajaxResponse=response.data;		
+		
+		
+		
+			}
+	);
+});
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>

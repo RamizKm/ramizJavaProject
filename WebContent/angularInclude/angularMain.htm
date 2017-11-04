@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body>
+Angular include
+
+<div ng-app="myapp" ng-controller="divController">
+
+
+<div ng-include="'firstInclude.html'" style="background-color:blue"> </div>
+Error logs <br/>
+forgot to write ng infront of controller
+<div ng-include="'secondInclude.html'" style="background-color: red"></div>
+
+empl fName={{employee.empFname}}
+<br/>
+emp M name ={{employee.empMname}}
+
+<br/>
+div test value{{textValue}}
+
+</div>
+<script type="text/javascript">
+console.log('after body js');
+var app=angular.module("myapp",[]);
+
+app.controller("divController",function($scope) {
+console.log('angular main js loaded');	
+	$scope.employee={
+		empFname:'nice first name',
+		empMname:'nice middle name',
+		subjectMarks:[
+		        {subject:'physics',marks:'89'},
+		        {subject:'chemistery',marks:'98'},
+		        {subject:'mathematics',marks:'97'},
+		        {subject:'biology',marks:'90'}
+		         ]
+	};
+	$scope.textValue='test value being checked';
+	$scope.txtMsg="Congratulation to all students of SP pune";
+});
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<script type="text/javascript"  src="../js/angular.js"></script>
+<script type="text/javascript">
+
+
+var app=angular.module("mydivapp",[]);
+app.controller("ajaxController",
+		function($scope,$http) {
+var urldkd="dataFile.txt";	
+$http.get(urldkd).success(function(response)
+		
+		{
+	console.log('response received='+response);
+	$scope.subjects=response;
+		
+	
+		});
+
+});
+
+
+
+
+
+</script>
+
+</head>
+
+
+
+<body>
+
+<div ng-app="mydivapp" ng-controller="ajaxController">
+
+div ajax controller
+
+<li ng-repeat="x in subjects" >
+{{x.name }} {{x.location}}
+
+</li>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Angularjs filter search</title>
+<script type="text/javascript" src="../js/angular.js"></script>
+
+</head>
+<body ng-app="onlyonengapp">
+
+
+<div ng-controller="searchList">
+
+countryName:<input type="text" ng-model="countryName"/><br/>
+
+cityList:<input type="text" ng-model="cityName"/> 
+
+<br/>
+country list <li ng-repeat="x in listobj  | filter:countryName" >{{x}}</li>>
+
+<br/>
+
+sub urb list <li ng-repeat="y in cityList| filter:cityName" >{{y}}</li>
+
+<br/>
+
+eastern suburb <li ng-repeat="c in curly">{{c}}</li>
+
+</div>
+
+
+
+
+</body>
+<script type="text/javascript">
+
+var myapp=angular.module("onlyonengapp",[]);
+
+myapp.controller("searchList",function($scope) {
+	console.log('search list controller');
+	
+	$scope.listobj=["india","usa","uae","shri lanka","singapore","australia","afganistan","south africa"];
+	$scope.cityList=["nigdi","chinchawad","pimpri","dapodi","kasarwadi","bhosari","khadaki"];
+		//currly does not work
+	$scope.curly=["manjri","hadapsar","kalepadal","sasanenagar"];
+});
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+
+
+
+
+
+<script type="text/javascript"  src="../js/angular.js"></script>
+
+
+<script type="text/javascript">
+
+var app=angular.module("ngappEx",[]);
+app.controller("ngcntrl",function($scope,$http) {
+	
+	console.log('simple check controller working');
+	$http.get("simpleDataFileReturn.txt").success(function(response)
+	{
+		console.log(response);
+	}		
+	);
+	
+});
+
+
+</script>
+
+</head>
+<body ng-app="ngappEx" ng-controller="ngcntrl">
+
+</body>
+</html>

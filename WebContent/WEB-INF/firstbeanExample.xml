@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:task="http://www.springframework.org/schema/task"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+  
+  <!-- 
+  <task:scheduled-tasks scheduler="printingScheduler">
+   <task:scheduled ref="SchedulerExampleBean" method="getMessageDetails" fixed-delay="3000" />
+   <task:scheduled ref="SchedulerClass5Min" method="get5min" cron="*/5 * * * * *" />
+ </task:scheduled-tasks>
+
+ <bean id="BismillahSpringBean" class="com.rkm.spring.beans.BismillahSpringBean"></bean>
+ <bean id="SchedulerExampleBean" class="com.rkm.spring.beans.SchedulerExampleBean"></bean>
+ <bean id="SchedulerClass5Min" class="com.rkm.spring.beans.SchedulerClass5Min"></bean>
+ 
+ 
+ <task:scheduler id="printingScheduler" />
+ 
+ <import resource="springSchedulingExample.xml"></import>
+ 
+ -->
+ </beans>
