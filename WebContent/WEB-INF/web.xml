@@ -17,7 +17,7 @@
       <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
          <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.te.rest.service</param-value>
+            <param-value>com.rkm.rest.handler</param-value>
          </init-param>
 		<init-param>
 		    <param-name>com.sun.jersey.config.feature.TracePerRequest</param-name>
@@ -43,9 +43,31 @@
 	 	<servlet-name>rkmServletExampleHandler</servlet-name>
 	 	<servlet-class>com.rkm.servletHandler.rkmServletExampleHandler</servlet-class>
 	 </servlet>
+	 <servlet>
+	 	<description>
+	 	</description>
+	 	<display-name>TestServletHandler</display-name>
+	 	<servlet-name>TestServletHandler</servlet-name>
+	 	<servlet-class>com.rkm.servletHandler.TestServletHandler</servlet-class>
+	 </servlet>
+	 <servlet>
+	 	<description>
+	 	</description>
+	 	<display-name>SpringFirstBeansLoadBeanHandler</display-name>
+	 	<servlet-name>SpringFirstBeansLoadBeanHandler</servlet-name>
+	 	<servlet-class>com.spring.serlvet.SpringFirstBeansLoadBeanHandler</servlet-class>
+	 </servlet>
 	 <servlet-mapping>
 	 	<servlet-name>rkmServletExampleHandler</servlet-name>
 	 	<url-pattern>/rkmServletExampleHandler</url-pattern>
+	 </servlet-mapping>
+	 <servlet-mapping>
+	 	<servlet-name>TestServletHandler</servlet-name>
+	 	<url-pattern>/TestServletHandler</url-pattern>
+	 </servlet-mapping>
+	 <servlet-mapping>
+	 	<servlet-name>SpringFirstBeansLoadBeanHandler</servlet-name>
+	 	<url-pattern>/SpringFirstBeansLoadBeanHandler</url-pattern>
 	 </servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>abc.jsp</welcome-file>
