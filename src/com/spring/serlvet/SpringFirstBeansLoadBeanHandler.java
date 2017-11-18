@@ -43,6 +43,26 @@ public class SpringFirstBeansLoadBeanHandler extends HttpServlet {
 		
 		WebApplicationContext ap=WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
 		SimpleSpringFirstBean scb=null;
+		
+	WebApplicationContext abc=WebApplicationContextUtils.findWebApplicationContext(this.getServletContext());
+		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() abc="+abc);
+		
+	 String aname=abc.getApplicationName();
+		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() aname="+aname);
+		String[] benasloaded=ap.getBeanDefinitionNames();
+		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() count="+benasloaded.length);
+		for(String nm:benasloaded) {
+			System.out.println("SpringFirstBeansLoadBeanHandler.doPost() nm="+nm);
+		}
+		
+		
+		 benasloaded=abc.getBeanDefinitionNames();
+		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() count="+benasloaded.length);
+		for(String nm:benasloaded) {
+			System.out.println("SpringFirstBeansLoadBeanHandler.doPost() nm="+nm);
+		}
+		
+		
 	try {
 		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() ab="+ap);
 		scb=(SimpleSpringFirstBean) ap.getBean("SimpleSpringFirstBean");

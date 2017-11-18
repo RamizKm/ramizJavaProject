@@ -3,21 +3,22 @@
 	<display-name>ramizJavaProject</display-name>
 	
 	
-	<context-param>
-	<param-name>contextConfigLocation</param-name>
-	<param-value>classpath*:firstbeanExample.xml</param-value>
-	</context-param>
 	<listener>
 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+
+	<context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>/WEB-INF/firstbeanExample.xml</param-value>
+	</context-param>
 	
 	
 	 <servlet>
-      <servlet-name>Jersey RESTful Application</servlet-name>
+      <servlet-name>restServlet</servlet-name>
       <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
          <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.rkm.rest.handler</param-value>
+            <param-value>com.rkm.rest.service</param-value>
          </init-param>
 		<init-param>
 		    <param-name>com.sun.jersey.config.feature.TracePerRequest</param-name>
@@ -69,6 +70,12 @@
 	 	<servlet-name>SpringFirstBeansLoadBeanHandler</servlet-name>
 	 	<url-pattern>/SpringFirstBeansLoadBeanHandler</url-pattern>
 	 </servlet-mapping>
+	 
+	 <servlet-mapping>
+	 <servlet-name>restServlet</servlet-name>
+	 <url-pattern>/rest/*</url-pattern>
+	 </servlet-mapping>
+	 
 	<welcome-file-list>
 		<welcome-file>abc.jsp</welcome-file>
 	

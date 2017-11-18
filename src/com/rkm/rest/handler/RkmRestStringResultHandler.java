@@ -2,7 +2,6 @@ package com.rkm.rest.handler;
 
 
 
-
 public class RkmRestStringResultHandler {
 
 	
