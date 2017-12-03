@@ -6,19 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-
+<script type="text/javascript" src="../js/angular.js"></script>
 
 <script type="text/javascript">
 var app=angular.module('listngapp',[]);
-
+console.log('ng app started');
 app.controller('listPojoResponse',function($scope,$http){
 console.log('controller called');	
+
+var sc=$scope;
 
 var partyarr=[];
 
 $scope.myRetriveParty=function(){
-	
-	$http.get('http://localhost:8080/zRamizRestWebWork/ListPojoService/getList').then(function(response){
+	console.log('retreive party started');
+	$http.get('../rest/ListRestService/getCityNames').then(function(response){
 		console.log('call to successful rest'+response.data);
 	
 	$scope.listResponse=response.data;
@@ -31,7 +33,18 @@ $scope.myRetriveParty=function(){
 	})
 	
 }
+
+('#textbutton').onClick=function() {
+	console.log('it is called');
+	sc.myRetriveParty();
+	
+}
+
+console.log('call to java script function. need to take value in some function');
+sc.myRetriveParty();
+
 });
+
 
 </script>
 
@@ -42,8 +55,8 @@ $scope.myRetriveParty=function(){
 
 response from rest service={{listResponse}}
 
+<button id="textbutton"  value="callajaxfunction"> </button>
 
 </div>
-
 </body>
 </html>

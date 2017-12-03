@@ -69,7 +69,7 @@ public class SpringFirstBeansLoadBeanHandler extends HttpServlet {
 	}catch(Exception e) {
 		e.printStackTrace();
 	}
-	SpringSchoolBean ssc=(SpringSchoolBean) ap.getBean("SpringSchoolBean");
+	com.spring.beans.SpringSchoolBean ssc=(SpringSchoolBean) ap.getBean("SpringSchoolBean");
 	System.out.println("ssc="+ssc);
 		
 		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() scb="+scb);

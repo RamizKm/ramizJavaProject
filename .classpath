@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="collectionSrc"/>
-	<classpathentry kind="src" path="restSrc"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk7"/>
-	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/servlet-api-2.5.jar"/>
-	<classpathentry kind="output" path="build/classes"/>
+  <classpathentry kind="src" path="src" including="**/*.java"/>
+  <classpathentry kind="src" path="collectionSrc" including="**/*.java"/>
+  <classpathentry kind="src" path="restSrc" including="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>

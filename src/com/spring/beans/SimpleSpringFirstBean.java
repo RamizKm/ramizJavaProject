@@ -2,13 +2,14 @@ package com.spring.beans;
 
 public class SimpleSpringFirstBean {
 	
-	
+
+	private String name;
+	private String details;
+
 	public SimpleSpringFirstBean() {
 		System.out.println("SimpleSpringFirstBean constructor");
 	}
 	
-	private String name;
-	private String details;
 	public String getName() {
 		return name;
 	}
