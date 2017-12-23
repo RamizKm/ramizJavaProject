@@ -4,6 +4,11 @@ package com.rkm.dto;
 public class NewStudentDto {
 
 
+	@Override
+	public String toString() {
+		return "NewStudentDto [name=" + name + ", parentName=" + parentName
+				+ ", address=" + address + ", mobileNO=" + mobileNO + "]";
+	}
 	private String name;
 	private String parentName;
 	private String address;

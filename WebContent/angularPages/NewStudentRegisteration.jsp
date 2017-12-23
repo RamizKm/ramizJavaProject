@@ -23,6 +23,28 @@ Parent Name <input type="text" ng-model="ParentName"></input>
 <input type="button" value="submit details" onclick="normalBUtton()"/>
 <!-- call it like javascrpt function -->
 <button ng-click="validateStdDetails()" value="button tag"  name="buttonDdkd" title="button tag dkd"> button tag </button>
+
+<button ng-click="restServiceCall()" value="button tag"  name="buttonDdkd" title="button tag dkd"> restServiceCall tag </button>
+
+<div style="color:red;background-color:green;">
+{{responseRest}}
+
+<br/>
+
+{{nm.address}}
+
+<br/>
+{{nm.name}}
+<br/>
+{{nm.mobileNO}}
+<br/>
+
+
+
+
+
+</div>
+
 </body>
 <script type="text/javascript">
 var appd=angular.module("registerApp",[]);
@@ -35,7 +57,7 @@ function normalBUtton() {
 	
 }
 
-appd.controller("registerationController",['$scope',function($scope){
+appd.controller("registerationController",['$scope','$http',function($scope,$http){
 	console.log('controller started');
 	
 	console.log('in controller');
@@ -48,12 +70,44 @@ appd.controller("registerationController",['$scope',function($scope){
 		console.log('ramiz log');
 		console.log('onclick started');
 		
+		var add=$scope.address;
+		var mno=$scope.mobileNo;
+		console.log('address='+add);
+		console.log('mobile no='+mno);
+		var user;
+		console.log(user);
+		
+	};
+	
+	var hk=$http;
+	console.log('hk='+hk);
+	
+	$scope.restServiceCall=function() {
+		console.log('restServiceCall started');
+		var ad=$scope.address;
+		console.log(ad);
+		var htdd=$http;
+		console.log(htdd);
+		
+		var urld="/"+$scope.mobileNo+"/"+$scope.address+"/"+$scope.firstName;
+		$http.get('http://localhost:8080/ramizJavaProject/rest/NewStudentRegisterationRestHandler/registerStudent'+urld).
+		then(function(response){
+		console.log('response received sucess');	
+		
+		$scope.nm=response.data;
+		console.log('after handling success response');
+		},function(response){
+			console.log('error has occured');
+			console.log(response);
+			console.log(response.statusText);
+			
+		} )
+		
+		
 		
 		
 	};
 	console.log('outside click function');
-	
-	
 	
 }]);
 console.log('after controller');

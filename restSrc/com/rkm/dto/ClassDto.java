@@ -6,6 +6,7 @@ public class ClassDto {
 	private String floor;
 	private String stdId;
 	public String getRoomId() {
+		System.out.println("ClassDto.getRoomId() room="+roomId);
 		return roomId;
 	}
 	public void setRoomId(String roomId) {
@@ -15,9 +16,11 @@ public class ClassDto {
 		return floor;
 	}
 	public void setFloor(String floor) {
+		System.out.println("ClassDto.setFloor() flr="+floor);
 		this.floor = floor;
 	}
 	public String getStdId() {
+		System.out.println("ClassDto.getStdId()");
 		return stdId;
 	}
 	public void setStdId(String stdId) {

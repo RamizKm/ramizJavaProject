@@ -7,6 +7,8 @@ TrimcCHeckClass.class
 com\hashset\PersonDto.class
 Test.class
 WindClass.class
+com\rkm\rest\service\NewStudentRegisterationRestHandler.class
+com\rkm\rest\service\ListStudentDEtailsRestHandler.class
 com\spring\beans\SpringSchoolBean.class
 com\CalenderExample.class
 com\rkm\rest\service\ListOneElementService.class
