@@ -5,6 +5,7 @@ select * from users;
 
 select * from school;
 
+drop table rkmexample;
 create table rkmexample (
 rkmid int
 );
@@ -13,10 +14,10 @@ select * from rkmexample;
 
 drop table rkmschool;
 create table rkmschool (
-rkmid int,
-rkmschlname varchar(100),
-rkmschladdr varchar(100),
-rkmcity     varchar(100)
+rkmid number not null,
+rkmschlname varchar2(100),
+rkmschladdr varchar2(100),
+rkmcity     varchar2(100)
 );
 
 alter table rkmschool add primary key (rkmid,rkmschlname);
@@ -28,29 +29,31 @@ select * from rkmschool;
 drop table rkmstudent;
 
 create table rkmstudent (
-studentid varhar2(100) not null,
+studentid varchar2(100) not null,
 stdfname varchar2(100) not null,
+stddateofbirth varchar2(100) not null,
 stdmname varchar2(100),
-stdlname varchar2(100),
-stddateofbirth varchar2(100) not null
+stdlname varchar2(100)
+
 );
 
 
 alter table rkmstudent add constraint primary key (studentid,stdfname,stddateofbirth);
 
-insert into rkmstudent(studid,stdfname,stdmname) values ('rkm123','rkm fist','rkm first mname');
+insert into rkmstudent(studentid,stdfname,stddateofbirth) values ('rkm123','rkm fist','rkm first mname');
 
-describe table rkmstudent;
+--desc rkmstudent;
 
 drop table aulog;
 
 create table aulog (
-activitytype varchar2(100),
-activitiyid varchar2(100),
-activityvalue varchar2(100) 
+acttype varchar2(100) not null,
+actid varchar2(150) not null,
+activityvalue varchar2(100) not null,
+actvitiydesc varchar2(100)
 );
 
-alter table aulog add constraint primary key(activitytype,activitiyid,activityvalue);
+alter table aulog add constraint primary key (actid);
 
 
 
