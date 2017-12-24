@@ -55,5 +55,8 @@ actvitiydesc varchar2(100)
 
 alter table aulog add constraint primary key (actid);
 
+insert into aulog (acttype,actid,actvitiydesc,activityvalue) values ('create','1','create account','   ');
 
-
+insert into aulog (acttype,actid,actvitiydesc,activityvalue) values('create','2','create account','    ');
+commit;
+select * from aulog;
