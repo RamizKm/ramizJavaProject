@@ -1,4 +1,4 @@
---user =root and password=root
+--refere mail for details
 
 use test;
 --Oracle 11g Express Edition
