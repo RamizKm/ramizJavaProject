@@ -84,3 +84,37 @@ insert into rkmschool values(4,'vibgyor school','wakad','pune');
 select * from aulog;
 
 commit;
+
+select * from rkmstudent;
+
+desc rkmstudent;
+describe table rkmstudent;
+
+insert into rkmstudent values ('2','rkm2','2017-12-01','sk','momin');
+
+--drop trigger student_insert if exists;syntax error
+drop trigger student_insert;
+create trigger student_insert before insert on rkmstudent
+for each row
+begin
+insert into aulog
+SET auid=new.studentid,
+actid=new.stdfname ,
+acttype='insert new ',
+activityvalue=new.stddateofbirth,
+actvitiydesc=new.stdlname,
+entname='rkmstudent',
+actcolname='new record';
+end;
+
+insert into rkmstudent values ('5','ssk','1990-12-11','sk','momin');
+
+select * from aulog;
+alter table aulog add column actcolname varchar(100);
+alter table aulog add column entname varchar(100);
+
+--alter table aulog drop constraint primary key;syntax error
+alter table aulog drop primary key; --correct syntax.
+alter table aulog add auintid integer ;
+
+
