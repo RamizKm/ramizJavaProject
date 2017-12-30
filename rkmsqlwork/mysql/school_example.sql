@@ -118,3 +118,16 @@ alter table aulog drop primary key; --correct syntax.
 alter table aulog add auintid integer ;
 
 
+create table studentJdbc (
+studentid varchar(100),
+studentname varchar(100),
+studentlastname varchar(100),
+studentmname varchar(100),
+studentlname varchar(100),
+studentdateofbirth varchar(100)
+);
+--corect syntax
+alter table studentJdbc add primary key (studentid,studentname,studentmname,studentlname);
+
+
+

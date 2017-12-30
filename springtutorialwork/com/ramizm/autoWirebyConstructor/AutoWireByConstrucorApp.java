@@ -3,8 +3,6 @@ package com.ramizm.autoWirebyConstructor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import com.ramizm.byTypeAutoWiring.PersonDO;
-
 public class AutoWireByConstrucorApp {
 	//actual file name
 	public static String filename="D:/RAMIZ_WORK/Spring_Tutorial_App/src/com/ramizm/autoWirebyConstructor/autoWireByConstructor.xml";
