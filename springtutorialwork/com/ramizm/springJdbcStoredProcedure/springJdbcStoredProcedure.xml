@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- correct format for connecting to oralce DATABAE -->
+	    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" scope="prototype">
+	 	 <property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+	 	 <property name="url" value="jdbc:oracle:thin:@localhost:1521:bismillahora"></property>
+	 	 <property name="username" value="system"></property>
+	 	  <property name="password" value="vjti123"></property>
+	 	 <!--   <property name="dataSourceName" value="ds"></property>-->
+	    </bean>
+    
+  
+  <bean id="flatdaoimpl" class="com.ramizm.springJdbcStoredProcedure.FlatDAOImplHandler">
+  
+  <property name="dataSource" ref="dataSource"></property>
+  </bean>
+    
+    </beans> 
+   <!--  
+    <bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource">
+    <property name="dataSourceName" value="ds"/>
+    <property name="URL" value="jdbc:oracle:thin:@<hostname>:<port_num>:<SID>"/>
+    <property name="user" value="dummy_user"/>
+    <property name="password" value="dummy_pwd"/>
+</bean>
+-->

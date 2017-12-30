@@ -57,7 +57,10 @@
                 <target>1.7</target>
 					<compilePath>
 					${rkmPath}/servlet-api-2.5.jar;${rkmPath}/jsr311-api-1.1.1.jar;${rkmPath}/spring-beans-4.2.1.RELEASE.jar;${rkmPath}/spring-context-4.2.1.RELEASE.jar;${rkmPath}/spring-core-4.2.1.RELEASE.jar;
-					;${rkmPath}/spring-expression-4.2.1.RELEASE.jar;${rkmPath}/gson-2.3.1.jar;${rkmPath}/spring-web-4.2.1.RELEASE.jar;;		
+					;${rkmPath}/spring-expression-4.2.1.RELEASE.jar;${rkmPath}/gson-2.3.1.jar;${rkmPath}/spring-web-4.2.1.RELEASE.jar;${rkmPath}/aspect_lib/aspectjrt-1.6.8.jar;
+					;${rkmPath}/aspect_lib/aspectjtools-1.6.2.jar;${rkmPath}/aspect_lib/aspectjweaver-1.6.2.jar;${rkmPath}/aspect_lib/com.springsource.org.aopalliance-1.0.0.jar;
+					;${rkmPath}/spring421lib/spring-jdbc-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-orm-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-oxm-4.2.1.RELEASE.jar;;					
+					;${rkmPath}/commons-lang/commons-lang3-3.0.jar;${rkmPath}/commons-lang/commons-lang-2.6.jar;${rkmPath}/spring421lib/spring-tx-4.2.1.RELEASE.jar;
 					</compilePath>     	   
 		        </configuration>
             </plugin>
@@ -115,6 +118,7 @@
                 <source>src</source>
                 <source>collectionSrc</source>
                 <source>restSrc</source>
+				 <source>springtutorialwork</source>
               </sources>
               
               

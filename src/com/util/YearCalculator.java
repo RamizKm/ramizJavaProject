@@ -41,7 +41,7 @@ public class YearCalculator {
 		String dob=split[1];
 		
 		//dob=dob.replace("/", "-");
-		
+	
 		//29/11/1989
 	Calendar cd=Calendar.getInstance();
 	

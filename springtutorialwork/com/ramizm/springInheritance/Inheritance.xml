@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+	    <bean id="ramizHelloworld" class="com.ramizm.springInheritance.BuildingInheritanceDO" scope="prototype">
+	 	   <property name="buildingId" value="rb  parent checkkkkkkkkkkke"></property>
+	    </bean>
+    
+   <bean id="childinheritanceDO" class="com.ramizm.springInheritance.FlatDoSun" scope="prototype" parent="ramizHelloworld">
+	 	   <property name="flatId" value="ramiz doing hello world keep patience"></property>
+	 	
+	    </bean>
+    
+    </beans> 

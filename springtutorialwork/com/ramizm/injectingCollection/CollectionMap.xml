@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+	    <bean id="ramizHelloworld" class="com.ramizm.injectingCollection.CollegeCollectionDO" scope="prototype">
+		 	 <property name="employeeList">
+		 	 <list>
+			 	 <value>91307 RAMIZ MOMIN</value>
+			 	 <value>91308 kshitij deshpande</value>
+			 	 <value>91309 laksh lumba</value>
+			 	 <value>91310 ashish bhabhale</value>
+			 	 <value>91311 kailas thube</value>
+		 	 </list>
+		 	 </property>
+			<property name="vendorSet">
+				<set>
+				<value>security vendor</value>					
+				<value>food vendor</value>
+				<value>stationary vendor</value>
+				<value>cleaning vendor</value>
+				<value>computer reparing vendor</value>
+				<value>teaching suppplier vendor</value>
+				</set>
+		</property>	
+		<property name="assetMap">
+			<map>
+			<entry key="computer" value="lenova dell"></entry>
+			<entry key="nilkamal" value="chair"></entry>
+			<entry key="vehicle" value="tata motorcorp"></entry>
+			<entry key="canteen" value="chiar and dining table"></entry>
+			</map>
+		</property> 	 
+	    
+	    </bean>
+ </beans> 

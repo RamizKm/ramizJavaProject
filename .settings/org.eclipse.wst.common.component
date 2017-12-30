@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/collectionSrc"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/restSrc"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/springtutorialwork"/>
         <property name="context-root" value="ramizJavaProject"/>
         <property name="java-output-path" value="/ramizJavaProject/build/classes"/>
         <property name="component.inclusion.patterns" value="WEB-INF/lib/*.jar"/>
