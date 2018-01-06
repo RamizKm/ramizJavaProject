@@ -10,7 +10,7 @@ import com.ramizm.qualifierAnnotation.CollegeDO;
 public class studentJdbcApp {
 	
 	public static String filename="D:/RAMIZ_WORK/Spring_Tutorial_App/src/com/ramizm/springJdbcTemplate/springJdbcTemplate.xml";
-	
+	public static String relPath="springtutorialwork/com/ramizm/springJdbcTemplate/springJdbcTemplate.xml";
 	public studentJdbcApp()
 	{
 		System.out.println("studentJdbcApp.studentJdbcApp()");
@@ -19,7 +19,7 @@ public class studentJdbcApp {
 		System.out.println("studentJdbcApp.main()");
 		System.out.println("studentJdbcApp.main() started..");
 		System.out.println("CollectionInjectionApp.main() started.");
-		ApplicationContext app=new FileSystemXmlApplicationContext(filename);
+		ApplicationContext app=new FileSystemXmlApplicationContext(relPath);
 		StudentDAOImplHandler hrdo=(StudentDAOImplHandler)app.getBean("studentJdbcdao");
 		System.out.println("studentJdbcApp.main() hrdo="+hrdo);
 		

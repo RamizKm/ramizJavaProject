@@ -130,4 +130,19 @@ studentdateofbirth varchar(100)
 alter table studentJdbc add primary key (studentid,studentname,studentmname,studentlname);
 
 
+insert into studentjdbc('1','almighty','aalmight', '','only almighty','20170111');
 
+
+
+create table studentxml (
+studentid varchar(100),
+studentName varchar(100),
+studentdob varchar(100),
+studentxml blob
+);
+
+alter table studentxml add primary key (studentid,studentname,studentdob);
+
+insert into studentxml values ('1','fatima','19-08-1989','date of birth details given');
+
+alter table studentxml add studnetclob longtext;

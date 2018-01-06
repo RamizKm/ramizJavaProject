@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
-	    <bean id="ramizHelloworld" class="com.ramizm.autoWirebyConstructor.BusDepoDO" scope="prototype" autowire="byName">
+	    <bean id="ramizHelloworld" class="com.ramizm.autoWirebyConstructor.BusDepoDO" scope="prototype" autowire="constructor">
 	 	  <constructor-arg ref="ramizCustomerDo"></constructor-arg>
 	    </bean>
     
