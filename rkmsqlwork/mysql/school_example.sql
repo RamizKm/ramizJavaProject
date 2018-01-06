@@ -146,3 +146,5 @@ alter table studentxml add primary key (studentid,studentname,studentdob);
 insert into studentxml values ('1','fatima','19-08-1989','date of birth details given');
 
 alter table studentxml add studnetclob longtext;
+--see all columns in db
+describe tablename
