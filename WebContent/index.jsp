@@ -20,10 +20,10 @@ body is coming
 <a href="rest/FirstRestService/geetGreting">FirstRestService getgreeting</a>
 <br/>
 
-<a href="FirstRestService/geetGreting">FirstRestService getgreeting check if it works</a>
+<a href="rest/FirstRestService/geetGreting">FirstRestService getgreeting check if it works</a>
 <br/>
 
-<a href="FirstRestService/getFlatDetails">FirstRestService getgreeting get flat detatils</a>
+<a href="rest/FirstRestService/getFlatDetails">FirstRestService getgreeting get flat detatils</a>
 <br/>
 
 <a href="rest/FirstRestService/getFlatDetails">FirstRestService getgreeting get flat detatils</a>

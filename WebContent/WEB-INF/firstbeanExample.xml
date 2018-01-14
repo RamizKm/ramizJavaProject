@@ -17,5 +17,7 @@
   <property name="medium" value="hindi medium"></property>
   <property name="intake" value="2000"></property>
   </bean>
+  
+  <import resource="springSchedulingExample.xml"/>
  
  </beans>

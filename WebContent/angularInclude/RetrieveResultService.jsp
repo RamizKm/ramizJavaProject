@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
+<script type="text/javascript" src="../js/angular.js"></script>
+
 <script type="text/javascript">
 var app=angular.module('myNgApp',[]);
 
@@ -14,9 +16,17 @@ console.log('controller called');
 
 var partyarr=[];
 
+
+var scp=$scope;
+console.log('scp ='+scp);
+
+console.log('retrieve party call finished');
+
+
 $scope.myRetriveParty=function(){
 	
-	$http.get('http://localhost:8080/zRamizRestWebWork/sampleRestFunction').then(function(response){
+	console.log('inside function');
+	$http.get('http://localhost:8080/ramizJavaProject/rest/sampleRestFunction').then(function(response){
 		console.log('call to successful rest'+response.data);
 	
 	$scope.partyarr=response.data;
@@ -26,10 +36,17 @@ $scope.myRetriveParty=function(){
 		console.log('error has occured');
 		console.log(response.statusText);
 		
-	})
+	});
 	
 }
+
+//call to angular function
+scp.myRetriveParty();
+
+
 });
+
+
 
 
 

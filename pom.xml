@@ -203,7 +203,7 @@
                 <configuration>
 				<source>1.6</source>
                 <target>1.7</target>
-				<compileSourceRoots>src,restSrc,springJmsSrc,collectionSrc</compileSourceRoots>
+			<!--	<compileSourceRoots>src,restSrc,springJmsSrc,collectionSrc</compileSourceRoots> -->
 			<!--
 				<compilePath>
 					${rkmPath}/servlet-api-2.5.jar;${rkmPath}/jsr311-api-1.1.1.jar;${rkmPath}/spring-beans-4.2.1.RELEASE.jar;${rkmPath}/spring-context-4.2.1.RELEASE.jar;${rkmPath}/spring-core-4.2.1.RELEASE.jar;
@@ -225,8 +225,7 @@
     <artifactId>maven-war-plugin</artifactId>
     <version>3.2.0</version>
     <configuration>
-        <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
-         <failOnMissingWebXml>false</failOnMissingWebXml>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
 		  <webResources>
 		    <resource>
               <!-- this is relative to the pom.xml directory -->
