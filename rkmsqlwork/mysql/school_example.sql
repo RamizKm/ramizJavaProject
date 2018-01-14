@@ -118,3 +118,33 @@ alter table aulog drop primary key; --correct syntax.
 alter table aulog add auintid integer ;
 
 
+create table studentJdbc (
+studentid varchar(100),
+studentname varchar(100),
+studentlastname varchar(100),
+studentmname varchar(100),
+studentlname varchar(100),
+studentdateofbirth varchar(100)
+);
+--corect syntax
+alter table studentJdbc add primary key (studentid,studentname,studentmname,studentlname);
+
+
+insert into studentjdbc('1','almighty','aalmight', '','only almighty','20170111');
+
+
+
+create table studentxml (
+studentid varchar(100),
+studentName varchar(100),
+studentdob varchar(100),
+studentxml blob
+);
+
+alter table studentxml add primary key (studentid,studentname,studentdob);
+
+insert into studentxml values ('1','fatima','19-08-1989','date of birth details given');
+
+alter table studentxml add studnetclob longtext;
+--see all columns in db
+describe tablename

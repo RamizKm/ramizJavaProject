@@ -4,12 +4,16 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
-	    <bean id="ramizHelloworld" class="com.ramizm.byTypeAutoWiring.PersonDO" scope="prototype" autowire="byName">
+	    <bean id="ramizHelloworld" class="com.ramizm.byTypeAutoWiring.PersonDO" scope="prototype" autowire="byType">
 	 	   <property name="personId" value="BASRI HOTEL"></property>
 	    <property name="mobileInfo"  ref="ramizCustomerDo"></property>
 	    </bean>
     
     <bean id="ramizCustomerDo" class="com.ramizm.byTypeAutoWiring.MobileDo"></bean>
+ 	 <bean id="newdto" class="com.ramizm.byTypeAutoWiring.NewByTypeDto">
+ 	 	<property name="idcheck" value="new bytype value"></property>
+ 	 </bean>
+ 	
  
     
     </beans> 

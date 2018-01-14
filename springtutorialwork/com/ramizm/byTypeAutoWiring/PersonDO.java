@@ -4,6 +4,7 @@ public class PersonDO {
 
 	public String personId;
 	private MobileDo mobileInfo;
+	private NewByTypeDto newByDto;
 	public String getPersonId() {
 		System.out.println("PersonDO.getPersonId()");
 		return personId;
@@ -23,8 +24,19 @@ public class PersonDO {
 	public void retrieveMobilePersonInfo()
 	{
 		System.out.println("PersonDO.retrieveMobilePersonInfo() from parent calling sub.............paren........");
+		
+		System.out.println("PersonDO.retrieveMobilePersonInfo() this by type="+newByDto);
+		
 		mobileInfo.fetchDetails();
 	}
+	public NewByTypeDto getNewByDto() {
+		return newByDto;
+	}
+	public void setNewByDto(NewByTypeDto newByDto) {
+		this.newByDto = newByDto;
+	}
+	
+	
 	
 	
 }
