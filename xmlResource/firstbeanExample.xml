@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:task="http://www.springframework.org/schema/task"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+ 
+ <bean id="SimpleSpringFirstBean" class="com.spring.beans.SimpleSpringFirstBean">
+ <property name="name" value="bean value from spring bean name"></property>
+ <property name="details" value="details will be loaded shortly"></property>
+  </bean> 
+  
+  <bean id="SpringSchoolBean" class="com.spring.beans.SpringSchoolBean">
+  <property name="medium" value="hindi medium"></property>
+  <property name="intake" value="2000"></property>
+  </bean>
+ 
+ </beans>

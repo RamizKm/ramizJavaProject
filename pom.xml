@@ -15,38 +15,175 @@
 <rkmPath>${project.basedir}/lib</rkmPath>
 </properties>  
  
-	   
-	   
-	
     <repositories>
        <repository>
          <id>mavenOpenSrc</id>
          <name>abcddk</name>
          <url>https://repo.maven.apache.org/maven2/</url>
-       </repository>
-	   </repositories>
-  
+       </repository> 
 
+	   <repository>
+      <id>my-internal-site</id>
+      <url>http://repo1.maven.org/maven2/</url>
+    </repository>
+   </repositories>
+	   
+	   
+	<dependencies>
+		<dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.11.1</version>
+    </dependency>
+	<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-pool</artifactId>
+			<version>5.11.1</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>4.3.4.RELEASE</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-servlet</artifactId>
+		<version>1.19.1</version>
+	</dependency>
+
+		<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-core</artifactId>
+		<version>1.19.1</version>
+	</dependency>
+
+		<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-json</artifactId>
+		<version>1.19.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-client</artifactId>
+		<version>1.19.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>2.3.1</version>
+	</dependency>
+	
+	
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.5</version>
+	</dependency>
+	
+		<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.5</version>
+	</dependency>
+
+		<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+	</dependency>
+
+		<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+	</dependency>
+	
+		<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjrt</artifactId>
+		<version>1.8.10</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjweaver</artifactId>
+		<version>1.8.10</version>
+	</dependency>
+
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.6</version>
+	</dependency>
+
+	
+	
+	
+	</dependencies>
+	   
   
   <build>
-  
-  
-  
-  
   <plugins>
-  <!-- war plugin -->
-  
-   
-  	<plugin>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>2.5</version>
-    <configuration>
-        <warSourceDirectory>WebContent</warSourceDirectory>
-        <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
-         <failOnMissingWebXml>false</failOnMissingWebXml>
-     </configuration>
-</plugin>
+ <!-- war plugin -->
 
+		<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.9.1</version>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>src</source>
+                <source>collectionSrc</source>
+                <source>restSrc</source>
+				 <source>springtutorialwork</source>
+				  <source>springJmsSrc</source>
+              </sources>
+           </configuration>
+          </execution>
+        </executions>
+      </plugin>
+ 
  			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,15 +192,39 @@
                 <configuration>
 				<source>1.6</source>
                 <target>1.7</target>
-					<compilePath>
+				
+			<!--
+				<compilePath>
 					${rkmPath}/servlet-api-2.5.jar;${rkmPath}/jsr311-api-1.1.1.jar;${rkmPath}/spring-beans-4.2.1.RELEASE.jar;${rkmPath}/spring-context-4.2.1.RELEASE.jar;${rkmPath}/spring-core-4.2.1.RELEASE.jar;
 					;${rkmPath}/spring-expression-4.2.1.RELEASE.jar;${rkmPath}/gson-2.3.1.jar;${rkmPath}/spring-web-4.2.1.RELEASE.jar;${rkmPath}/aspect_lib/aspectjrt-1.6.8.jar;
 					;${rkmPath}/aspect_lib/aspectjtools-1.6.2.jar;${rkmPath}/aspect_lib/aspectjweaver-1.6.2.jar;${rkmPath}/aspect_lib/com.springsource.org.aopalliance-1.0.0.jar;
 					;${rkmPath}/spring421lib/spring-jdbc-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-orm-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-oxm-4.2.1.RELEASE.jar;;					
-					;${rkmPath}/commons-lang/commons-lang3-3.0.jar;${rkmPath}/commons-lang/commons-lang-2.6.jar;${rkmPath}/spring421lib/spring-tx-4.2.1.RELEASE.jar;${rkmPath}/xstream/xstream1.1.2.jar;;
-					</compilePath>     	   
-		        </configuration>
+					;${rkmPath}/commons-lang/commons-lang3-3.0.jar;${rkmPath}/commons-lang/commons-lang-2.6.jar;${rkmPath}/spring421lib/spring-tx-4.2.1.RELEASE.jar;
+				
+	</compilePath>     	   
+		-->
+
+	</configuration>
             </plugin>
+ 
+   
+ 	<plugin>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.2.0</version>
+    <configuration>
+        <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
+         <failOnMissingWebXml>false</failOnMissingWebXml>
+		  <webResources>
+		    <resource>
+              <!-- this is relative to the pom.xml directory -->
+				<directory>WebContent</directory>
+            </resource>
+			</webResources>
+			<classesDirectory>src,collectionSrc,restSrc</classesDirectory>
+			<warSourceDirectory>WebContent</warSourceDirectory>
+     </configuration>
+	</plugin>
+
             
         <!--     
             			<compilePath>
@@ -102,34 +263,9 @@
       </plugin>
 -->
 
-<plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.9.1</version>
-        <executions>
-          <execution>
-            <id>add-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>src</source>
-                <source>collectionSrc</source>
-                <source>restSrc</source>
-				 <source>springtutorialwork</source>
-              </sources>
-              
-              
-              
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
 				<!-- compiler plugin -->
 
-            
+     <!--       
 	 <plugin>
 	 
 			<groupId>org.apache.tomcat.maven</groupId>
@@ -153,7 +289,10 @@
 				 <update>true</update>
 			</configuration>
 	 </plugin>
+	 -->
+
 	 
+	 <!--
 		 <plugin>
 		  <groupId>org.eclipse.jetty</groupId>
 		  <artifactId>jetty-maven-plugin</artifactId>
@@ -169,8 +308,9 @@
 			<scanIntervalSeconds>10</scanIntervalSeconds>
 		   </configuration>
 		</plugin>
+		
+		-->
  </plugins> 
     <finalName>ramizJavaProject</finalName>
-    <sourceDirectory>src</sourceDirectory>
-  </build>
+	</build>
 </project>
