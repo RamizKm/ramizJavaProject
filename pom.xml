@@ -150,9 +150,17 @@
 		<version>5.1.6</version>
 	</dependency>
 
+	<dependency>
+		<groupId>com.thoughtworks.xstream</groupId>
+		<artifactId>xstream</artifactId>
+		<version>1.3.1</version>
+	</dependency>
 	
-	
-	
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.6</version>
+	</dependency>
 	</dependencies>
 	   
   
@@ -160,6 +168,7 @@
   <plugins>
  <!-- war plugin -->
 
+ 
 		<plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -183,6 +192,8 @@
           </execution>
         </executions>
       </plugin>
+	  
+ 
  
  			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -192,7 +203,7 @@
                 <configuration>
 				<source>1.6</source>
                 <target>1.7</target>
-				
+				<compileSourceRoots>src,restSrc,springJmsSrc,collectionSrc</compileSourceRoots>
 			<!--
 				<compilePath>
 					${rkmPath}/servlet-api-2.5.jar;${rkmPath}/jsr311-api-1.1.1.jar;${rkmPath}/spring-beans-4.2.1.RELEASE.jar;${rkmPath}/spring-context-4.2.1.RELEASE.jar;${rkmPath}/spring-core-4.2.1.RELEASE.jar;
@@ -201,11 +212,13 @@
 					;${rkmPath}/spring421lib/spring-jdbc-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-orm-4.2.1.RELEASE.jar;${rkmPath}/spring421lib/spring-oxm-4.2.1.RELEASE.jar;;					
 					;${rkmPath}/commons-lang/commons-lang3-3.0.jar;${rkmPath}/commons-lang/commons-lang-2.6.jar;${rkmPath}/spring421lib/spring-tx-4.2.1.RELEASE.jar;
 				
-	</compilePath>     	   
+	</compilePath> 
 		-->
+		
 
 	</configuration>
             </plugin>
+			
  
    
  	<plugin>
@@ -220,7 +233,7 @@
 				<directory>WebContent</directory>
             </resource>
 			</webResources>
-			<classesDirectory>src,collectionSrc,restSrc</classesDirectory>
+			<classesDirectory>src,collectionSrc,restSrc,springJmsSrc</classesDirectory>
 			<warSourceDirectory>WebContent</warSourceDirectory>
      </configuration>
 	</plugin>
