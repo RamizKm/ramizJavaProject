@@ -12,7 +12,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.spring.beans.SimpleSpringFirstBean;
-import com.spring.beans.SpringSchoolBean;
+
 
 /**
  * Servlet implementation class SpringFirstBeansLoadBeanHandler
@@ -25,7 +25,7 @@ public class SpringFirstBeansLoadBeanHandler extends HttpServlet {
      */
     public SpringFirstBeansLoadBeanHandler() {
         super();
-        // TODO Auto-generated constructor stub
+        System.out.println("SpringFirstBeansLoadBeanHandler.SpringFirstBeansLoadBeanHandler() started");
     }
 
 	/**
@@ -42,13 +42,9 @@ public class SpringFirstBeansLoadBeanHandler extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		WebApplicationContext ap=WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
-		SimpleSpringFirstBean scb=null;
 		
 	WebApplicationContext abc=WebApplicationContextUtils.findWebApplicationContext(this.getServletContext());
 		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() abc="+abc);
-		
-	 String aname=abc.getApplicationName();
-		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() aname="+aname);
 		String[] benasloaded=ap.getBeanDefinitionNames();
 		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() count="+benasloaded.length);
 		for(String nm:benasloaded) {
@@ -63,20 +59,7 @@ public class SpringFirstBeansLoadBeanHandler extends HttpServlet {
 		}
 		
 		
-	try {
-		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() ab="+ap);
-		scb=(SimpleSpringFirstBean) ap.getBean("SimpleSpringFirstBean");
-	}catch(Exception e) {
-		e.printStackTrace();
-	}
-	com.spring.beans.SpringSchoolBean ssc=(SpringSchoolBean) ap.getBean("SpringSchoolBean");
-	System.out.println("ssc="+ssc);
 		
-		System.out.println("SpringFirstBeansLoadBeanHandler.doPost() scb="+scb);
-		System.out.println("dtails="+scb.getDetails()+" name="+scb.getName());
-		
-		PrintWriter pw=response.getWriter();
-		pw.write("details="+scb.getDetails()+" name="+scb.getName());
 	}
 
 }

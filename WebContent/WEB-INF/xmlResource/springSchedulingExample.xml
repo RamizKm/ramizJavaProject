@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="SimpleBean" class="com.rkm.spring.beans.SimpleBean"></bean>
+
+
+
+    <bean id="conrkmfactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://localhost:61616"/>
+    </bean>
+    
+    <bean id="SubscriberSecondTopic" class="com.rkm.subscriber.SubscriberSecondTopic"> </bean>
+	<bean id="RKmQueueListen" class="com.rkm.subscriber.RKmQueueListen"> </bean>
+	
+
+
+
+  <bean id="queueSPringContainer" class="org.springframework.jms.listener.SimpleMessageListenerContainer">
+        <property name="connectionFactory" ref="conrkmfactory"/>
+        <property name="destination" ref="queue"/>
+      <!--    <property name="destination-type" value="queue"/>  part of old config--> 
+        <property name="concurrentConsumers" value="3"/>
+        <property name="messageListener" ref="RKmQueueListen"/>
+        <property name="pubSubDomain" value="false"></property>
+    </bean>
+    
+     <bean id="publlisherSubscripbper" class="org.springframework.jms.listener.SimpleMessageListenerContainer">
+        <property name="connectionFactory" ref="conrkmfactory"/>
+        <property name="destination" ref="firstTopic"/>
+      <!--    <property name="destination-type" value="queue"/>  part of old config--> 
+        <property name="concurrentConsumers" value="3"/> <!-- with this 3 messages are sent to same bean -->
+        <property name="messageListener" ref="SubscriberSecondTopic"/> <!-- topic  -->
+        <property name="pubSubDomain" value="true"></property>
+    </bean>
+    
+
+</beans>

@@ -36,10 +36,13 @@ com\rkm\servletHandler\TestServletHandler.class
 com\ramizm\setterBasedInjection\HospitalDO.class
 com\ramizm\MultipleSpringUtil\FirstUtil.class
 SwitchClass.class
+AbcDiaTest.class
 com\rkm\dto\FlatDto.class
 com\ramizm\byTypeAutoWiring\MobileDo.class
 com\ramizm\autoWirebyConstructor\BusDepoDO.class
+com\TestPattern.class
 com\ramizm\importAnnotation\TechnologyDO.class
+com\rkm\subscriber\SubscriberSecondTopic.class
 com\ramizm\constructorBasedInjection\CollegeDO.class
 com\ramizm\springjavaBasedPackage\ConfigurationUtil.class
 com\ramizm\springJdbcTemplate\studentJdbcCreateApp.class
@@ -79,6 +82,7 @@ com\ramizm\springInheritance\InheritanceApp.class
 WindClass.class
 com\ramizm\springIocContainer\XmlBeanFactoryApp.class
 com\rkm\rest\service\NewStudentRegisterationRestHandler.class
+com\rkm\subscriber\RKmQueueListen.class
 com\ramizm\MultipleSpringUtil\Abcdo.class
 com\ramizm\MultipleSpringUtil\MultipleSpringUtilApp.class
 Matcher.class
@@ -87,6 +91,7 @@ com\ramizm\autowiredonProperties\AutoWiredOnPropertiesApp.class
 com\ramizm\springjavaBasedPackage\CollgeJavaApp.class
 com\ramizm\springJdbcStoredProcedure\FlatStoredProcedureApp.class
 com\rkm\dto\ClassDto.class
+com\rkm\subscriber\SubscriberFirstTopic.class
 com\ramizm\autowireByName\HotelCustomerDo.class
 com\ramizm\setterBasedInjection\DoctorsDO.class
 com\ramizm\springContextEvent\contextStoppedEventApp.class
@@ -108,13 +113,16 @@ TestJava.class
 com\ramizm\springAspectOrienteProgramming\BagDO.class
 com\ramizm\constructorBasedInjection\StudentDO.class
 com\rkm\jms\SimpleSpringRkmBean.class
+com\ListRemover.class
 com\ramizm\byTypeAutoWiring\AutoWireByApp.class
 com\ramizm\spring\Injecting\innerBean\SpringInjectionInnerBeanApp.class
 com\ramizm\springAspectOrienteProgramming\LoggingHandler.class
 com\ramizm\springIocContainer\Filesystem\HelloworldDOxmlDO.class
 com\ramizm\springCustomEvent\RamizCustomEventApp.class
 com\ramizm\qualifierAnnotation\QualifierStudentApp.class
+com\rkm\spring\beans\SimpleBean.class
 com\ramizm\springBeanPostProcessor\BooKdo.class
+AbcDo.class
 com\ramizm\springJdbcTemplate\studentJdbcApp.class
 com\ramizm\qualifierAnnotation\StudentQualifierDO.class
 com\ramizm\springCustomEvent\CustomEventPublisher.class
