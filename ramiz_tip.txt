@@ -1,0 +1,4 @@
+before making ramizjaavproject up, apache mq should be up.
+while starting it tries to connect and get failed
+
+----------

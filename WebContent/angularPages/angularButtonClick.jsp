@@ -18,11 +18,8 @@ ap.controller('btnClick',['$scope',function($scope) {
 		
 	};
 	
-	
+console.log('end of function ');	
 }                     
-                          
-                          
-                          
                           ]);
 
 

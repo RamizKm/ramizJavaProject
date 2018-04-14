@@ -9,6 +9,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
         <property name="context-root" value="ramizJavaProject"/>
         <property name="java-output-path" value="/ramizJavaProject/build/classes"/>
-        <property name="component.inclusion.patterns" value="WEB-INF/lib/*.jar"/>
+        <property name="component.inclusion.patterns"/>
     </wb-module>
 </project-modules>

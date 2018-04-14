@@ -1,4 +1,5 @@
 import java.io.UnsupportedEncodingException;
+import java.util.Calendar;
 
 
 public class AbcDiaTest {
@@ -23,7 +24,8 @@ public class AbcDiaTest {
 		
 		System.out.println("AbcDiaTest.main() dld="+a);
 		
-		
+		Calendar cd=Calendar.getInstance();
+		System.out.println(cd);
 		
 	}
 	

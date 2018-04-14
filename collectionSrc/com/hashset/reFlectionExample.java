@@ -7,6 +7,9 @@ public class reFlectionExample {
 		Class<?> cp=PersonDto.class.getClass();
 		Object dto=(PersonDto) cp.newInstance();
 		System.out.println(dto.getClass().getName());
+		
+		//persondto is not having any constructor.
+		
 	
 		
 	}
