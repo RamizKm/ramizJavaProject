@@ -13,12 +13,21 @@
 	</context-param>
 	
 	
+	
+	<servlet>
+	<servlet-name>springServlet</servlet-name>
+	<servlet-class></servlet-class>
+	
+	
+	</servlet>
+	
+	
 	 <servlet>
       <servlet-name>restServlet</servlet-name>
       <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
          <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.rkm.rest.service</param-value>
+            <param-value>com.rkm.rest.service;com.rkm.spring.rest</param-value>
          </init-param>
 		<init-param>
 		    <param-name>com.sun.jersey.config.feature.TracePerRequest</param-name>
