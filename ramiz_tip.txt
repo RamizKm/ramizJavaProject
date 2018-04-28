@@ -2,3 +2,23 @@ before making ramizjaavproject up, apache mq should be up.
 while starting it tries to connect and get failed
 
 ----------
+to install typescript
+
+npm install -g typescript
+-------------
+to compile ts to js run below command
+
+tsc tsfileName
+
+------------
+for running ts files , we need to use node command
+
+node abc.ts (abc.ts is filename)
+
+--------
+only one constructor is allowed
+
+otherwise syntax error
+
+var classObj=new ClasName();
+

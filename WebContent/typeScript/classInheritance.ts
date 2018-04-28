@@ -43,5 +43,9 @@ class ChildClass extends ParentClass {
 
 
 var chil=new ChildClass();
-var out=chil.printDetails();
+//var out=chil.printDetails(); //arugment missing  Expected 1 arguments, but got 0. syntax erro
+var out=chil.printDetails('inutstrvaluddddk');
 console.log('output ='+out);
+
+console.log(out.parentString);
+console.log(chil.childStr+"child string  printed");
