@@ -49,3 +49,16 @@ console.log('output ='+out);
 
 console.log(out.parentString);
 console.log(chil.childStr+"child string  printed");
+
+var childObjInstance=new ChildClass();
+
+console.log('inst obj started='+childObjInstance);
+
+var a=childObjInstance instanceof ChildClass;
+var ab=childObjInstance instanceof ParentClass;
+
+console.log(' a value='+a);
+
+console.log('b value='+ab);
+
+
