@@ -7,6 +7,7 @@ public class SwitchClass {
 		test(1);
 		test(2);
 		test(10);
+	System.out.println("test commit");
 		
 		
 	}
