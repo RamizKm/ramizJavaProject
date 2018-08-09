@@ -1,0 +1,18 @@
+import java.util.Calendar;
+
+
+public class CalendarMilisecond {
+	
+	public static void main(String[] args) {
+		
+		Calendar cal=Calendar.getInstance();
+		
+		System.out.println(cal);
+		
+		cal.add(Calendar.MILLISECOND, 1);
+		System.out.println(cal);
+		
+	}
+	
+
+}

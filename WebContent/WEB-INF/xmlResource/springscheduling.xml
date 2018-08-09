@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
  xmlns:task="http://www.springframework.org/schema/task"
@@ -7,9 +6,15 @@
                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
                             http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
 
-                            <import resource="/xmlResource/firstbeanExample.xml"/>
-        			         <import resource="/xmlResource/springSchedulingExample.xml"/>
-                             <import resource="/xmlResource/rkmmqconfig.xml"/>
-                              <import resource="/xmlResource/springscheduling.xml"/>
-                            
-                          </beans>
+
+	<bean id="schedulingBeanclass" class="com.rkm.springscheduling.SpringSchedulingBean"></bean>
+<bean id="otherSimpleBean" class="com.rkm.springscheduling.OtherSimpleBean" ></bean>
+
+ <task:scheduled-tasks scheduler="printingScheduler">
+  <task:scheduled ref="schedulingBeanclass" method="printTime" fixed-delay="5000" />
+ </task:scheduled-tasks>
+ <!-- time is in milisecond -->
+ 
+ <task:scheduler id="printingScheduler" />
+
+</beans>
