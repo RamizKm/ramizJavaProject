@@ -9,7 +9,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import com.google.gson.annotations.JsonAdapter;
 import com.rkm.dto.FlatDto;
 
 
@@ -68,7 +67,9 @@ public class FirstRestService {
 	}
 	
 	
-	
+	public FirstRestService() {
+		System.out.println("FirstRestService.enclosing_method() constructor");
+	}
 	
 	
 	
