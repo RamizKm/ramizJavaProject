@@ -1,0 +1,17 @@
+
+rest test
+
+http://localhost:8080/ramizJavaProject/rest/FirstRestService/getGreeting
+
+
+http://localhost:8080/ramizJavaProject/rest/FirstRestService/getIdByPathParam/rkmtest
+
+
+http://localhost:8080/ramizJavaProject/rest/FirstRestService/getIdbyQueryParam?name=rkmtestvalue
+
+
+may 2014 to Jan 2015=7 months
+
+july 2016 to till Date=july 2018= 2 years
+
+
